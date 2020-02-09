@@ -1,0 +1,240 @@
+html{
+  height:100%;
+  width:100%;
+}
+
+body{
+  height:100%;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#caa472;
+}
+
+#App {
+  text-align: center;
+  height:50vh;
+  width:50vh;
+  margin:auto;
+}
+
+#game{
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  position:relative;
+}
+
+#buttonsContainer{
+  background-color:#111;
+  border-radius:50%;
+  height:100%;
+  width:100%;
+}
+
+.buttons{
+  height:46%;
+  width:46%;
+  position:relative;
+  top:4%;
+  border: none;
+}
+
+.buttons::-moz-focus-inner {
+  border: 0;
+}
+
+#greenButton{
+  background-color:#0d0;
+  background-image: radial-gradient(farthest-side at 100% 100%,  #050, #0e0);
+  border-radius:100% 0 0 0;
+}
+
+#greenButton.greenButtonActive  {     
+  background-color:#0f0;
+  background-image: none;
+}
+
+#redButton{
+  background-color:#d00;
+  background-image: linear-gradient(135deg, #e00 , #700);
+  border-radius:0 100% 0 0;
+}
+
+#redButton.redButtonActive  {   
+  background-color:#f00;  
+  background-image: none;
+}
+
+#yellowButton{
+  background-color:#dd0;
+  background-image: radial-gradient(farthest-side at 0% 0%, #ee0 60%, #aa0);
+  border-radius:0 0 100% 0;
+}
+
+#yellowButton.yellowButtonActive  {   
+  background-color:#ff0;  
+  background-image: none;
+}
+
+#blueButton{
+  background-color:#00d;
+  background-image: linear-gradient(135deg, #00e , #007);
+  border-radius:0 0 0 100%;
+}
+
+#blueButton.blueButtonActive  {   
+  background-color:#00f;  
+  background-image: none;
+}
+
+.hiders{
+  background-color:#111;
+  position:absolute;
+}
+
+.verticalBar{
+  height:96%;
+  width:6%;
+  top:2%;
+  left:47%;
+}
+
+.horizontalBar{
+  height:6%;
+  width:96%;
+  top:47%;
+  left:2%
+}
+
+.center{
+  width:50%;
+  height:50%;
+  border-radius:50%;
+  top:25%;
+  left:25%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.controlCenter{
+  position:absolute;
+  background-image: linear-gradient(135deg, #fff , #aaa);
+  width:80%;
+  height:80%;
+  border-radius:50%;
+  top:10%;
+  left:10%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.nameTag{
+  font-size:5vh;
+  height:0%;
+  position:relative;
+  top:-9%;
+  font-weight: 900;
+}
+
+.display{
+  background:black;
+  height:18%;
+  width:55%;
+  margin-top:8%;
+  text-align:center;
+}
+
+@font-face { font-family: Display; src: url('https://cdn.glitch.com/15641b43-c210-486f-a65d-0578ad5642b4%2Fdigital-7%20(mono).ttf?v=1563985429146'); } 
+
+#displayValue{
+  color:red;
+  position:relative;
+  font-size:4vh;
+  top:-115%;
+  font-family:Display;
+}
+
+.controls{
+  height:50%;
+  width:100%;
+  border-radius:0 0 50% 50%;
+  display:grid;
+  grid-template-columns: 25% 25%;
+  grid-template-rows: 40% 50%;
+  grid-column-gap: 5%;
+  position:absolute;
+  top:50%;
+  align-items: start;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  
+}
+
+.controlLabel{
+  margin-top:35%;
+  font-weight:600;
+}
+
+#startButton{
+  border-radius:50%;
+  width:65%;
+  height:65%;
+  margin-top:-30%;
+  margin-right:5%;
+  background-image: linear-gradient(135deg, #f00 , #800);
+  align-self:center;
+}
+
+#startButton:active  {     
+  background-image: linear-gradient(135deg, #e00 , #700);
+}
+
+#toggleSwitch{
+  margin-top:-28%;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  width:100%;
+  height:55%;
+  background-color: #888;
+  position: relative;
+  align-self:center;
+}
+
+#toggleSwitch::after{
+  width:40%;
+  height:80%;
+  background-color: #900;
+  content: '';
+  position:absolute;
+  top:10%;
+  left:5%;
+  transition: left 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#toggleSwitch:checked::after{
+  left: 55%;
+  background-color: #0f0;
+}
+
+@media (max-width:700px), (max-height:700px){
+  #App, #game {
+    height:400px;
+    width:400px;
+  }
+
+  .nameTag{
+    font-size:40px;
+    top:-9%;
+  }
+
+  #displayValue{
+    font-size:30px;
+    top:-115%;
+  }
+}

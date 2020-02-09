@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simon Says</title>
+    <meta name="description" content="a simple jquery application">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script  src="./client.js" defer></script>
+  </head>
+  <body>
+    <div id="App">
+      <div id="game">
+        <div id="buttonsContainer">
+          <button id="greenButton" class="buttons" data-key="0"></button>
+          <button id="redButton" class="buttons" data-key="1"></button>
+          <button id="blueButton" class="buttons" data-key="2"></button>
+          <button id="yellowButton" class="buttons" data-key="3"></button>
+
+          <div class="verticalBar hiders"></div>
+          <div class="horizontalBar hiders"></div>
+        </div>
+
+        <div class="center hiders">
+          <div class="controlCenter">
+            <h1 class="nameTag">Simon</h1>
+            <div class="display">
+              <p id="displayValue"></p>
+            </div>
+            <div class="controls">
+              <p class="controlLabel">Start</p>
+              <p class="controlLabel">Strict</p>
+              <button id="startButton"></button>
+              <input type="checkbox" id="toggleSwitch" autocomplete="off"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
